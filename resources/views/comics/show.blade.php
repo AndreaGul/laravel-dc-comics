@@ -7,7 +7,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>ciao</h1>
-  <a href="{{route('comics.show',1)}}">asa</a>
+  <h1>ciao 2</h1>
+  {{-- <p>{{ $comic->id }}</p> --}}
+  <a href="{{route('comics.index')}}">asa</a> 
 </body>
 </html>
