@@ -12,13 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('comics', function (Blueprint $table) {
-           
-            $table->string('title');
+            $table->string('title', 100);
             $table->text('description')->nullable();
             $table->string('img')->nullable();
-            $table->string('price')->nullable();
+            $table->float('price',5,2)->nullable();
             $table->string('series')->nullable();
-            
+            $table->date('sale_date')->nullable();
+            $table->string('type', 50)->nullable();
+            $table->string('artists')->nullable();
+             $table->string('writers')->nullable();
         });
     }
 
@@ -28,11 +30,16 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('comics', function (Blueprint $table) {
+            
             $table->dropColumn('title');
             $table->dropColumn('description');
             $table->dropColumn('img');
             $table->dropColumn('price');
             $table->dropColumn('series');
+            $table->dropColumn('sale_date');
+            $table->dropColumn('type');
+            $table->dropColumn('artists');
+            $table->dropColumn('writers');
         });
     }
 };
