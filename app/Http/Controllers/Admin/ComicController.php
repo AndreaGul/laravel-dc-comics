@@ -35,8 +35,8 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
-       
-        return view('comics.show');
+    //  @dd($data);
+        return view('comics.store',compact('data'));
     }
 
     /**

@@ -5,8 +5,8 @@
  
   <form action="{{ route('comics.store')}}" method="POST">
     @csrf
-    <label >incia del testo</label>
-    <input type="text">
+    <label for="title">incia del testo</label>
+    <input type="text" name="title" id="title">
     <button>button</button>
     
   </form>
