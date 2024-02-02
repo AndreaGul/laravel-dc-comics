@@ -2,7 +2,7 @@
 
 @section('main')
   <h1>pagina create</h1>
- 
+ <p><a href="{{route('comics.show',1)}}">pagina show</a></p>
   <form action="{{ route('comics.store')}}" method="POST">
     @csrf
     <label for="title">incia del testo</label>

@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::table('comics', function (Blueprint $table) {
             $table->string('title', 100);
             $table->text('description')->nullable();
-            $table->string('img')->nullable();
-            $table->float('price',5,2)->nullable();
+            $table->text('thumb')->nullable();
+            $table->string('price')->nullable();
             $table->string('series')->nullable();
             $table->date('sale_date')->nullable();
             $table->string('type', 50)->nullable();
             $table->string('artists')->nullable();
-             $table->string('writers')->nullable();
+            $table->string('writers')->nullable();
         });
     }
 
@@ -33,7 +33,7 @@ return new class extends Migration
             
             $table->dropColumn('title');
             $table->dropColumn('description');
-            $table->dropColumn('img');
+            $table->dropColumn('thumb');
             $table->dropColumn('price');
             $table->dropColumn('series');
             $table->dropColumn('sale_date');
