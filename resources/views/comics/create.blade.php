@@ -2,7 +2,7 @@
 
 @section('main')
   <h1>Aggiungi fumetto</h1>
- <p><a href="{{route('comics.show',1)}}">pagina show</a></p>
+ <p><a href="{{route('comics.index')}}">pagina home</a></p>
   <form action="{{ route('comics.store')}}" method="POST">
     @csrf
     <div>
