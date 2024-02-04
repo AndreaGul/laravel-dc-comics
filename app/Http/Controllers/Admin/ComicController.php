@@ -78,7 +78,7 @@ class ComicController extends Controller
     public function update(Request $request, string $id)
     {
         $data = $request->all();
-        
+
         $comic_update= Comic::findOrFail($id);
 
         $comic_update->update($data);
@@ -89,8 +89,12 @@ class ComicController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+   
+    public function destroy(Comic $comic)
     {
-        //
+        
+        $comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }

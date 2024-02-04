@@ -6,7 +6,12 @@
     <ul>    
     @foreach ($comics as $comic)
          <li>{{ $comic['title'] }} <a href="{{route('comics.show',$comic['id'])}}">info</a>  <a href="{{route('comics.edit',$comic['id'])}}">modifica</a> </li>
-         
+        
+        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button>Cancella</button>
+        </form>
     @endforeach
     </ul>
     
