@@ -10,7 +10,7 @@
     @endforeach
     </ul>
     
-    <p><a href="{{route('comics.create')}}">pagina create</a> </p>
+    <button><a href="{{route('comics.create')}}">Aggiungi</a></button>
     <p><a href="{{route('home')}}">pagina home</a></p>
     
 @endsection
